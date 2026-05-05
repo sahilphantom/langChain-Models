@@ -1,0 +1,10 @@
+from langchain_google_genai import OpenAIEmbeddings
+from dotenv import load_dotenv
+
+load_dotenv()
+
+embedding = OpenAIEmbeddings(model='text-embedding-3-large', dimension=32)
+
+result = embedding.embed_query("islamabad is the capital of pakistan")
+
+print(str(result))
